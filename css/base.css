@@ -1,0 +1,184 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'iconfont';
+    src: url('../lib/ali-font/iconfont.eot');
+    src: url('../lib/ali-font/iconfont.eot?#iefix') format('embedded-opentype'),
+    url('../lib/ali-font/iconfont.woff') format('woff'),
+    url('../lib/ali-font/iconfont.ttf') format('truetype'),
+    url('../lib/ali-font/iconfont.svg#iconfont') format('svg');
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 12px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    font-size: 14px;
+    font-family: "Microsoft YaHei", "SimSun";
+}
+
+ul, ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    /* color: #000; */
+}
+
+a:focus, a:hover {
+    text-decoration: none;
+    /* color: #000; */
+}
+
+.f_left {
+    float: left;
+}
+
+.f_right {
+    float: right;
+}
+
+.hover {
+    border-bottom: 3px solid #dd3137;
+}
+
+i {
+    font-style: normal;
+}
+
+h3 {
+    margin: 0;
+}
+.hidden{
+  overflow: hidden;
+}
+.whiteSpace {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.whiteSpace_three {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+}
+
+.progress_bar {
+    display: block;
+    width: 80%;
+    height: 8px;
+    margin: 20px 0 8px 10px;
+    background: #475B66;
+    border-radius: 5px;
+}
+
+.progress_bar_null {
+    display: block;
+    width: 80%;
+    height: 8px;
+    margin: 20px 0 8px 10px;
+    background: rgba(71, 91, 102, .3);
+    border-radius: 5px;
+}
+
+.fa-star {
+    color: #475B66;
+    font-size: 16px;
+    margin: 0 -2px;
+    padding: 0;
+}
+
+.f-color {
+    color: #BEC3C7;
+    font-size: 16px;
+    margin: -2px;
+    padding: 0;
+}
+
+.t_red {
+    color: #dd3137;
+}
+
+.t_blue {
+    color: #475B66 !important;
+}
+
+.iconSize {
+    font-size: 36px !important;
+}
+
+.sotbot {
+    width: 45px;
+    height: 141px;
+    position: fixed;
+    right: 10px;
+    top: 200px;
+    z-index: 999;
+    padding: 13px;
+    color: #555555;
+    font-size: 16px;
+    border: 1px solid #A9AEB1;
+    background-color: #FFFFFF;
+    cursor: pointer;
+}
+
+.sotbot:hover {
+    background-color: red;
+    color: #fff;
+}
+
+.backTop {
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    font-size: 38px;
+    text-align: center;
+    z-index: 9999;
+    background: #fff;
+    cursor: pointer;
+}
+
+.bgWhite {
+    background: #fff;
+}
+
+.paddingNull {
+    padding: 0;
+}
+
+.rotateimg {
+    position: relative;
+    transition: transform 1s;
+}
+
+.rotateimg:hover {
+    transform: rotateY(360deg);
+}
+
+/*字体颜色*/
+.t_5EC1F1 {
+  color: #5EC1F1;
+}
+.t_5EC1F1:hover {
+  color: #5EC1F1;
+}
+.t_777777 {
+    color: #777777;
+}
+.t_FE9305 {
+    color: #FE9305 !important;
+}

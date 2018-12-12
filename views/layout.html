@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+  <head>
+    <!--设置字符集-->
+    <meta charset="utf-8">
+    <!-- 默认使用高版本浏览器 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 						宽度为设备宽度  			初始缩放的比例		是否允许用户缩放 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <title>微金所-成就亿万人的信用价值</title>
+    <!-- 关键字 -->
+    {{ block 'head' }}
+    <meta name="keyword" content="p2p,投资，互联网金融">
+    <!-- 网站描述 -->
+    <meta name="description" content="微金所weijinsuo.com-是面向个人投资人的投资平台，主要提供1-36个月、年化利率可达12.5%、100元起投的线上短期投资项目，并由优质的信贷机构提供全额本息担保，保障投资人的资金安全。">
+    <meta name="renderer" content="webkit">
+    <link rel="stylesheet" href="../lib/normalize/normalize.css">
+    <link rel="stylesheet" href="../lib/bootstrap-3.3.7/css/bootstrap.css">
+    <link rel="stylesheet" href="../lib/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/other.css">
+    <!--[if lt IE 9]>
+        <script src="../lib/html5shiv-master/html5shiv.min.js"></script>
+        <script src="../lib/respond/respond.min.js"></script>
+        <![endif]-->
+    {{ /block }}
+  </head>
+</head>
+
+<body class="navLayoutBg">
+  {{ block 'content' }}{{ /block }}
+
+  {{ block 'script' }}
+  <script src="../lib/jquery/jquery-1.12.4.min.js"></script>
+  <script src="../node_modules/art-template/lib/template-web.js"></script>
+  <script src="../lib/jquery/jquery.lazyload.min.js"></script>
+  <script src="../lib/bootstrap-3.3.7/js/bootstrap.js"></script>
+  <script src="../js/index.js"></script>
+  {{ /block }}
+  {{ block 'scriptAjax' }}
+  {{ /block }}
+</body>
+
+</html>

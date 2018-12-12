@@ -1,0 +1,147 @@
+{{ extend './layout.html' }}
+{{ block 'content' }}
+<div class="nav">
+  <div class="inner container">
+    <h1 class="logo"><a href="/"><img src="../images/logo.png" alt="">微金所logo</a></h1>
+    <ul>
+      <li><a class="registerbm" href="/register" id="register">注册</a></li>
+      <li><a class="bm" href="/login" id="login">登录</a></li>
+      <li><a href="/" class="btn btn-default hidden-xs">返回首页</a></li>
+    </ul>
+  </div>
+</div>
+<div class="registerBg">
+  <div class="content container">
+    <div class="row">
+      <div class="register col-md-5 col-sm-12 col-xs-12">
+        <form action="/register" method="POST">
+          <h3>注册微金所</h3>
+          <div class="form-group">
+            <i class="iconfont">&#xe647;</i>
+            <input type="text" class="form-control" id="phoneNum" name="phoneNum" placeholder="请输入您的手机号码">
+            <div class="warning phoneWarning"></div>
+          </div>
+          <div class="form-group">
+            <i class="iconfont">&#xe783;</i>
+            <input type="password" class="form-control" id="password" name="password" placeholder="必须为字母加数字且长度不小于8位">
+            <div class="warning psswordWarning"></div>
+          </div>
+          <div class="form-group">
+            <i class="iconfont">&#xe783;</i>
+            <input type="password" class="form-control" id="conPassword" name="conPassword" placeholder="确认密码">
+            <div class="warning conPasswordWarning"></div>
+          </div>
+          <div class="form-group clearfix margin_img">
+            <i class="iconfont verifyIcon">&#xe67d;</i>
+            <input type="text" class="form-control pull-left" id="verify" name="verify" placeholder="图片验证码">
+            <a class="verifyImg" href="/api/getCaptcha" alt="captcha">{{captcha.text}}</a>
+            <!-- <img class="verifyImg" src="/api/getCaptcha" alt="captcha"> -->
+            <!-- <img class="verifyImg" src="../images/yanzhengma.png" alt=""> -->
+            <div class="warning verifyWarning"></div>
+          </div>
+          <div class="form-group clearfix">
+            <i class="iconfont">&#xe616;</i>
+            <input type="text" class="form-control pull-left" id="phoneVerify" name="phoneVerify" placeholder="手机验证码">
+            <a class="phoneVerify btn btn-danger" src="../images/phoneVerify.png">获取验证码</a>
+            <div class="warning phoneVerifyWarning"></div>
+          </div>
+          <div class="form-group clearfix">
+            <div>
+              <a class="t_5EC1F1 inviteCode" href="javascript:;"><b class="iconfont">&#xe606;</b>输入邀请码</a>
+              <span class="agree t_777777 pull-right"><input class="checkbox pull-left" type="checkbox" name="checked"
+                  id="checkbox">我已阅读并同意<a class="t_FE9305 pull-right">微金所《服务协议》</a></span>
+            </div>
+            <div class="warning agreementWarning"></div>
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control hidden inviteCodeInput" id="" name="phoneVerify" placeholder="邀请码">
+          </div>
+          <button type="submit" class="submit btn btn-danger">注册</button>
+          <div class="form-group">
+            <p class="login_p t_777777">已有账号？<a class="t_FE9305" href="/login">立即登录</a></p>
+          </div>
+        </form>
+      </div>
+      <a class="img col-md-7 hidden-sm hidden-xs" href="javascript:;">
+        <img src="../images/register_img.jpg" alt="">
+      </a>
+    </div>
+  </div>
+  <div>aaaaaaaaaaaaaaaa</div>
+  <div class="center-block text-center registerCopy">&copy;版权所有&copy;深圳微金所金融信息服务有限公司 粤ICP备 16000732号-1</div>
+</div>
+{{ /block }}
+{{ block 'scriptAjax' }}
+<script>
+  $(function () {
+
+    // 手机号处理
+    var warning = $('.warning')
+    $('#phoneNum').focus(function () {
+      $('.phoneWarning').empty()
+    })
+
+    // 密码框处理
+    $('#password').focus(function () {
+      console.log('aaaaaaa')
+      $('.psswordWarning').empty()
+    })
+    // 确认密码框处理
+    $('#conPassword').focus(function () {
+      $('.conPasswordWarning').empty()
+    })
+
+    $('.submit').on('click', function () {
+      console.log('aaaaaaaa')
+      warning.map(function () {
+        console.log('bbbbbb')
+        warning.empty()
+      })
+    })
+    $('.verifyImg').on('click', function (e) {
+      e.preventDefault()
+      $.ajax({
+        url: '/register',
+        type: 'get',
+        dataType: 'json',
+        success: function (data) {
+          console.log(data)
+        }
+      })
+    })
+    $('form').on('submit', function (e) {
+      e.preventDefault()
+      var formData = $(this).serialize()
+      $.ajax({
+        url: '/register',
+        type: 'post',
+        data: formData,
+        success: function (data) {
+          console.log(data)
+          var err_code = data.err_code
+          var message = data.message
+          if (err_code === 0) { //注册成功
+            window.alert(message)
+            window.location.href = '/'
+          } else if (err_code === 1) {
+            warning[0].append(message)
+          } else if (err_code === 2) {
+            warning[0].append(message)
+          } else if (err_code === 3) {
+            warning[1].append(message)
+          } else if (err_code === 4) {
+            warning[2].append(message)
+          } else if (err_code === 5) {
+            warning[5].append(message)
+          } else if (err_code === 6) {
+            warning[3].append(message)
+          } else if (err_code === 500) {
+            window.alert(message)
+          }
+        }
+      })
+    })
+  })
+
+</script>
+{{ /block }}

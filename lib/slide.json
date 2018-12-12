@@ -1,0 +1,36 @@
+{
+  "mslide": [
+    {
+      "url": "../images/slide_m_01.jpg"
+    },
+    {
+      "url": "../images/slide_m_02.jpg"
+    },
+    {
+      "url": "../images/slide_m_03.jpg"
+    },
+    {
+      "url": "../images/slide_m_04.jpg"
+    },
+    {
+      "url": "../images/slide_m_05.jpg"
+    }
+  ],
+  "pcslide": [
+    {
+      "url": "../images/slide_pc_01.jpg"
+    },
+    {
+      "url": "../images/slide_pc_02.jpg"
+    },
+    {
+      "url": "../images/slide_pc_03.jpg"
+    },
+    {
+      "url": "../images/slide_pc_04.jpg"
+    },
+    {
+      "url": "../images/slide_pc_05.jpg"
+    }
+  ]
+}

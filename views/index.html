@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <!--设置字符集-->
+  <meta charset="utf-8">
+  <!-- 默认使用高版本浏览器 -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- 						宽度为设备宽度  			初始缩放的比例		是否允许用户缩放 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+  <title>微金所-成就亿万人的信用价值</title>
+  <!-- 关键字 -->
+  <meta name="keyword" content="p2p,投资，互联网金融">
+  <!-- 网站描述 -->
+  <meta name="description" content="微金所weijinsuo.com-是面向个人投资人的投资平台，主要提供1-36个月、年化利率可达12.5%、100元起投的线上短期投资项目，并由优质的信贷机构提供全额本息担保，保障投资人的资金安全。">
+  <meta name="renderer" content="webkit">
+  <link rel="shortcut icon" href="../images/favicon.ico" />
+  <link rel="stylesheet" href="../lib/normalize/normalize.css">
+  <link rel="stylesheet" href="../lib/bootstrap-3.3.7/css/bootstrap.css">
+  <link rel="stylesheet" href="../lib/font-awesome-4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/index.css">
+  <!--[if lt IE 9]>
+    <script src="../lib/html5shiv-master/html5shiv.min.js"></script>
+    <script src="../lib/respond/respond.min.js"></script>
+    <script>console.log('aaaaaaaaaaaaaaaaaaa')</script>
+    <![endif]-->
+</head>
+
+<body>
+  <!-- 公共部分 -->
+  <a class="sotbot"><i class="iconfont">&#xe77d;</i>在线客服</a>
+  <a class="backTop iconfont" href="#top">&#xe62d;</a>
+
+  <!-- 顶部通栏 -->
+  <div class="topBar ">
+    <div class="container topBar_inner">
+      <ul>
+        <li class="hidden-xs hidden-sm"><i class="fa fa-phone"></i><span>客服电话：4006-89-4006 / 010-57648460/（9:00~21:00）</span><b></b>
+        </li>
+        <li class="hidden-xs"><i class="fa fa-user-o"></i>在线客服<b></b></li>
+        <li class="app_qrcode"><i class="fa fa-mobile"></i>移动客户端<img src="../images/app-qrcode.jpg"><b></b></li>
+        <li class="wx_qrcode hidden-xs"><i class="fa fa-mobile"></i>微信公众号二维码<img src="../images/wx.jpg"><b></b></li>
+        <li><a href="javascript:;"><i class="fa fa-mobile"></i>财富登陆</a></li>
+      </ul>
+      {{if isLogins}}
+      <div class="personCenter">
+        <a class="telephone" href="javascript:;">
+          {{isLogins.phoneNum}}
+        </a>
+        <a href="javascript:;"><i class="iconfont">&#xe713;</i></a>
+        <a href="/loginout">退出</a>
+        <a class="hidden-sm hidden-xs" href="javascript:;">帮助中心<b></b></a>
+      </div>
+      {{else}}
+      <div class="personCenterTop">
+        <a href="/login">登陆</a>
+        <a class="register" href="/register">注册</a>
+        <a class="hidden-sm hidden-xs" href="javascript:;">帮助中心<b></b></a>
+      </div>
+      {{/if}}
+    </div>
+  </div>
+
+  <!-- 导航栏 -->
+  <div class="navBox" id="top">
+    <div class="navBox_inner">
+
+      <!--导航-->
+      <nav class="navbar navbar-default">
+        <div class="container paddingNull">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+              aria-expanded="true">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"><img src="../images/logo.png" alt=""></a>
+          </div>
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+              <li><a class="hover" href="/">首页</a></li>
+              <li><a href="#">我要投资</a></li>
+              <li><a href="#">长租公寓</a></li>
+              <li><a href="#">新手专区</a></li>
+              <li><a href="#">新闻公告</a></li>
+              <li class="hidden-md hidden-sm"><a href="#">信息披露</a></li>
+              <li><a href="#">投资者教育</a></li>
+              <li><a href="#"><i class="iconfont">&#xe629;</i>我的账户</a></li>
+              <li class="dropdown">
+                <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>-->
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">Separated link</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+      </nav>
+    </div>
+  </div>
+
+  <!-- 轮播图 -->
+  <div class="banner">
+    <!-- pc端轮播图 -->
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+
+      <ol class="carousel-indicators">
+        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="5"></li>
+      </ol>
+
+      <div class="carousel-inner" role="listbox">
+        {{each mslide}}
+        <div class="item">
+          <a class="hidden-xs" href="javascript:;"><img src="../images/slide_pc_0{{$index}}.jpg"></a>
+          <a class="m_slide hidden-lg hidden-md hidden-sm" href="javascript:;"><img src={{$value.url}} alt="..."></a>
+        </div>
+        {{/each}}
+      </div>
+
+      <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- 安全保障 -->
+  <div class="guarantee">
+    <div class="container guarantee_top hidden-xs">
+      <div class="f_left"><a href="javascript:;">公告:【微公告】微金所平台中秋节&十一放假通知 2017年度运营报告</a></div>
+      <div class="f_right"><a class="f_right" href="#">2017年度运营报告</a></div>
+      <div class="f_right"><a class="right" href="#">网络借贷暂行办法</a></div>
+    </div>
+    <div class="container guarantee_bottom">
+      <div class="row">
+        <div class="thumbnail col-xs-3 col-sm-3 col-md-2">
+          <a href="#">
+            <img class="rotateimg" src="../images/guarantee01.png" alt="...">
+            <div class="caption">
+              <h3 class="whiteSpace">A轮3.2亿元融资</h3>
+              <p>上市系·国资系·风投系</p>
+            </div>
+          </a>
+        </div>
+        <div class="thumbnail col-xs-3 col-sm-3 col-md-2">
+          <a href="#">
+            <img src="../images/guarantee02.png" alt="...">
+            <div class="caption">
+              <h3>银联支付</h3>
+              <p>全程保障资金保障</p>
+            </div>
+          </a>
+        </div>
+        <div class="thumbnail col-xs-3 col-sm-3 col-md-2">
+          <a href="#">
+            <img src="../images/guarantee03.png" alt="...">
+            <div class="caption">
+              <h3>银行资金存管</h3>
+              <p>资金保障进一步</p>
+            </div>
+          </a>
+        </div>
+        <div class="thumbnail col-xs-3 col-sm-3 col-md-2">
+          <a href="#">
+            <img src="../images/guarantee04.png" alt="...">
+            <div class="caption">
+              <h3>安全保障</h3>
+              <p>八重安全保障机制</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="thumbnail col-sm-3 col-md-2 guarantee_bottom_right hidden-xs hidden-sm">
+          <div class="caption ">
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;平台上线时间</p>
+            <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2013/11/15</h3>
+          </div>
+          <div class="caption">
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;已归还本息（元）</p>
+            <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;9,778,223,227</h3>
+          </div>
+        </div>
+        <div class="thumbnail col-sm-3 col-md-2 guarantee_bottom_right text-right hidden-xs hidden-sm">
+          <div class="caption">
+            <p>累计成交额</p>
+            <h3>11,014,746,371</h3>
+          </div>
+          <div class="caption">
+            <p>已为用户赚取收益（元）</p>
+            <h3>377,582,685</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 中部背景灰色 -->
+  <div class="centerbg">
+
+    <!-- 长租公寓 -->
+    <div class="apartment container">
+      <div class="row">
+        <div class="left col-md-8 col-sm-12 col-xs-12">
+          <div class="row">
+            <div class="content_left col-sm-2 col-xs-4 col-md-2 hidden-sm hidden-xs">
+              <h3>长租公寓</h3>
+            </div>
+            <div class="content_right col-sm-12 col-xs-12 col-md-10">
+              <a class="content_right_img" href="#" target="_blank">
+                <div>
+                  <h3>长租公寓-云海百川1期</h3>
+                  <span class="star btn btn-danger">明星产品</span>
+                </div>
+                <p>月付息到期还本</p>
+                <ul class="clearfix">
+                  <li>
+                    <span>9<i>%</i></span>
+                    <p>测算年化收益率</p>
+                  </li>
+                  <li>
+                    <span>185<i>天</i></span>
+                    <p>借款限额</p>
+                  </li>
+                  <li>
+                    <span>50<i>万</i></span>
+                    <p>筹集金额</p>
+                  </li>
+                  <li class="hidden-xs">
+                    <span><img src="../images/star-active.png"></span>
+                    <p>产品星级</p>
+                  </li>
+                  <li>
+                    <span class="progress_bar"></span>
+                    <p>投资进度100%</p>
+                  </li>
+                </ul>
+                <div class="btn btn-danger">立即投资</div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="right col-md-4 hidden-sm hidden-xs">
+          <div class="content_left"></div>
+          <div class="content_right">
+            <div class="top">
+              <img src="../images/top.png" alt="">
+              <div class="text">
+                <h3>移动理财</h3>
+                <p>你的专属掌上神器</p>
+              </div>
+            </div>
+            <div class="bottom clearfix">
+              <div class="wx_img  f_left">
+                <img src="../images/wx.png" alt="">
+                <p>微信公众号二维码</p>
+              </div>
+              <div class="app_img f_right">
+                <img src="../images/downloadApp.png" alt="">
+                <p>下载APP二维码</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 投资卡 -->
+    <div class="investment container">
+      <!-- 短期灵活 -->
+      <div class="investment_one row">
+        <div class="illustrate">
+          <h3>短期灵活</h3>
+          <p>1-3个月期限</p>
+          <a href="javascript:;">预约投标</a>
+          <a href="javascript:;">查看更多</a>
+        </div>
+        <div class="information_card row">
+          <a class="card_inner col-md-4 col-sm-6 col-xs-12" href="javascript:;">
+            <div class="seal">还款中</div>
+            <h4>微周转-辰时实业3期<span>机</span></h4>
+            <ul class="center clearfix">
+              <li>
+                <span>6.5<i>%</i></span>
+                <p>测算年化收益率</p>
+              </li>
+              <li>
+                <span>29<i>天</i></span>
+                <p>借款期限</p>
+              </li>
+            </ul>
+            <ul class="bottom hidden-xs">
+              <li>
+                <span>筹集金额（元）</span>
+                <p>50<i>万</i></p>
+              </li>
+              <li>
+                <span>产品星级</span>
+                <p>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star f-color"></i>
+                </p>
+              </li>
+              <li>
+                <span>投资进度100%</span>
+                <p class="progress_bar"></p>
+              </li>
+            </ul>
+          </a>
+          <a class="card_inner col-md-4 col-sm-4 hidden-xs hidden-sm" href="javascript:;">
+            <div class="seal">还款中</div>
+            <h4>微周转-英瑞畅源1期<span>机</span></h4>
+            <ul class="center clearfix">
+              <li>
+                <span>6.5%<i>%</i></span>
+                <p>测算年化收益率</p>
+              </li>
+              <li>
+                <span>29<i>天</i></span>
+                <p>借款期限</p>
+              </li>
+            </ul>
+            <ul class="bottom">
+              <li>
+                <span>筹集金额（元）</span>
+                <p>50<i>万</i></p>
+              </li>
+              <li>
+                <span>产品星级</span>
+                <p>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa f-color"></i>
+                  <i class="fa fa-star f-color"></i>
+                </p>
+              </li>
+              <li>
+                <span>投资进度100%</span>
+                <p class="progress_bar"></p>
+              </li>
+            </ul>
+          </a>
+          <a class="card_inner col-md-4 col-sm-6 col-xs-6 hidden-xs" href="javascript:;">
+            <div class="seal">还款中</div>
+            <h4>微周转-博雅瑞纳3期<span>机</span></h4>
+            <ul class="center clearfix">
+              <li>
+                <span>6.5<i>%</i></span>
+                <p>测算年化收益率</p>
+              </li>
+              <li>
+                <span>27<i>天</i></span>
+                <p>借款期限</p>
+              </li>
+            </ul>
+            <ul class="bottom  hidden-xs">
+              <li>
+                <span>筹集金额（元）</span>
+                <p>50<i>万</i></p>
+              </li>
+              <li>
+                <span>产品星级</span>
+                <p>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star f-color"></i>
+                </p>
+              </li>
+              <li>
+                <span>投资进度100%</span>
+                <p class="progress_bar"></p>
+              </li>
+            </ul>
+          </a>
+        </div>
+      </div>
+      <!-- 中期稳健 -->
+      <div class="investment_two investment_one row">
+        <div class="illustrate">
+          <h3>中期稳健</h3>
+          <p>4-9个月期限</p>
+          <a href="javascript:;">预约投标</a>
+          <a href="javascript:;">查看更多</a>
+        </div>
+        <div class="information_card row">
+          <a class="card_inner col-md-4 col-sm-6 col-xs-12" href="javascript:;">
+            <div class="seal">还款中</div>
+            <h4>易企贷-金凯嘉华2期<span>机</span></h4>
+            <ul class="center clearfix">
+              <li>
+                <span>9.5<i>%</i></span>
+                <p>测算年化收益率</p>
+              </li>
+              <li>
+                <span>8<i>个月</i></span>
+                <p>借款期限</p>
+              </li>
+            </ul>
+            <ul class="bottom hidden-xs">
+              <li>
+                <span>筹集金额（元）</span>
+                <p>50<i>万</i></p>
+              </li>
+              <li>
+                <span>产品星级</span>
+                <p>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star f-color"></i>
+                </p>
+              </li>
+              <li>
+                <span>投资进度100%</span>
+                <p class="progress_bar"></p>
+              </li>
+            </ul>
+          </a>
+          <a class="card_inner col-md-4 col-sm-4 hidden-xs hidden-sm" href="javascript:;">
+            <div class="seal">还款中</div>
+            <h4>金房宝-房抵项目五百五十六期<span>机</span></h4>
+            <ul class="center clearfix">
+              <li>
+                <span>8.5%<i>%</i></span>
+                <p>测算年化收益率</p>
+              </li>
+              <li>
+                <span>133<i>天</i></span>
+                <p>借款期限</p>
+              </li>
+            </ul>
+            <ul class="bottom">
+              <li>
+                <span>筹集金额（元）</span>
+                <p>20<i>万</i></p>
+              </li>
+              <li>
+                <span>产品星级</span>
+                <p>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star f-color"></i>
+                  <i class="fa fa-star f-color"></i>
+                </p>
+              </li>
+              <li>
+                <span>投资进度100%</span>
+                <p class="progress_bar"></p>
+              </li>
+            </ul>
+          </a>
+          <a class="card_inner col-md-4 col-sm-6 col-xs-6 hidden-xs" href="javascript:;">
+            <div class="seal">还款中</div>
+            <h4>金房宝-房抵项目五百五十六期<span>机</span></h4>
+            <ul class="center clearfix">
+              <li>
+                <span>8.5<i>%</i></span>
+                <p>测算年化收益率</p>
+              </li>
+              <li>
+                <span>139<i>天</i></span>
+                <p>借款期限</p>
+              </li>
+            </ul>
+            <ul class="bottom  hidden-xs">
+              <li>
+                <span>筹集金额（元）</span>
+                <p>20<i>万</i></p>
+              </li>
+              <li>
+                <span>产品星级</span>
+                <p>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star f-color"></i>
+                  <i class="fa fa-star f-color"></i>
+                </p>
+              </li>
+              <li>
+                <span>投资进度100%</span>
+                <p class="progress_bar"></p>
+              </li>
+            </ul>
+          </a>
+        </div>
+      </div>
+      <!-- 长期省心 -->
+      <div class="investment_three investment_one row">
+        <div class="illustrate">
+          <h3>长期省心</h3>
+          <p>10个月以上期限</p>
+          <a href="javascript:;">预约投标</a>
+          <a href="javascript:;">查看更多</a>
+        </div>
+        <div class="information_card row">
+          <a class="card_inner col-md-4 col-sm-6 col-xs-12" href="javascript:;">
+            <div class="seal">还款中</div>
+            <h4>微消费-丽人贷2037期<span>机</span></h4>
+            <ul class="center clearfix">
+              <li>
+                <span>11<i>%</i></span>
+                <p>测算年化收益率</p>
+              </li>
+              <li>
+                <span>364<i>天</i></span>
+                <p>借款期限</p>
+              </li>
+            </ul>
+            <ul class="bottom hidden-xs">
+              <li>
+                <span>筹集金额（元）</span>
+                <p>3<i>万</i></p>
+              </li>
+              <li>
+                <span>产品星级</span>
+                <p>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star f-color"></i>
+                </p>
+              </li>
+              <li>
+                <span>投资进度100%</span>
+                <p class="progress_bar"></p>
+              </li>
+            </ul>
+          </a>
+          <a class="card_inner col-md-4 col-sm-4 hidden-xs hidden-sm" href="javascript:;">
+            <div class="seal">还款中</div>
+            <h4>微消费-丽人贷2036期<span>机</span></h4>
+            <ul class="center clearfix">
+              <li>
+                <span>11<i>%</i></span>
+                <p>测算年化收益率</p>
+              </li>
+              <li>
+                <span>364<i>天</i></span>
+                <p>借款期限</p>
+              </li>
+            </ul>
+            <ul class="bottom">
+              <li>
+                <span>筹集金额（元）</span>
+                <p>3<i>万</i></p>
+              </li>
+              <li>
+                <span>产品星级</span>
+                <p>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa f-color"></i>
+                  <i class="fa f-color"></i>
+                </p>
+              </li>
+              <li>
+                <span>投资进度100%</span>
+                <p class="progress_bar"></p>
+              </li>
+            </ul>
+          </a>
+          <a class="card_inner col-md-4 col-sm-6 col-xs-6 hidden-xs" href="javascript:;">
+            <div class="seal">还款中</div>
+            <h4>微消费-丽人贷2036期<span>机</span></h4>
+            <ul class="center clearfix">
+              <li>
+                <span>11<i>%</i></span>
+                <p>测算年化收益率</p>
+              </li>
+              <li>
+                <span>364<i>天</i></span>
+                <p>借款期限</p>
+              </li>
+            </ul>
+            <ul class="bottom  hidden-xs">
+              <li>
+                <span>筹集金额（元）</span>
+                <p>1.5<i>万</i></p>
+              </li>
+              <li>
+                <span>产品星级</span>
+                <p>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star f-color"></i>
+                </p>
+              </li>
+              <li>
+                <span>投资进度100%</span>
+                <p class="progress_bar"></p>
+              </li>
+            </ul>
+          </a>
+        </div>
+      </div>
+      <!-- 微转让  -->
+      <div class="investment_four investment_one row">
+        <div class="illustrate">
+          <h3>微转让</h3>
+          <p>经常关注&nbsp;会有惊喜</p>
+          <a href="javascript:;">预约投标</a>
+          <a href="javascript:;">查看更多</a>
+        </div>
+        <div class="information_card row">
+          <a class="card_inner col-md-4 col-sm-6 col-xs-12" href="javascript:;">
+            <div class="seal">还款中</div>
+            <h4>易投保L-88期-3<span>月</span><span>机</span><span>转</span></h4>
+            <ul class="center clearfix">
+              <li>
+                <span><b class="t_red">39.48</b><i class="t_red">%</i><del>&nbsp;原:12%</del></span>
+                <p>测算年化收益率</p>
+              </li>
+              <li>
+                <span class="t_blue">169<i>天</i></span>
+                <p>借款期限</p>
+              </li>
+            </ul>
+            <ul class="bottom hidden-xs">
+              <li>
+                <span>筹集金额（元）</span>
+                <p>0.64<i>万</i></p>
+              </li>
+              <li>
+                <span>产品星级</span>
+                <p>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star f-color"></i>
+                </p>
+              </li>
+              <li>
+                <span>投资进度0%</span>
+                <p class="progress_bar_null"></p>
+              </li>
+            </ul>
+          </a>
+          <a class="card_inner col-md-4 col-sm-6 col-xs-12" href="javascript:;">
+            <div class="seal">还款中</div>
+            <h4>易投保L-88期-5<span>月</span><span>机</span><span>转</span></h4>
+            <ul class="center clearfix">
+              <li>
+                <span><b class="t_red">39.91</b><i class="t_red">%</i><del>&nbsp;原:12%</del></span>
+                <p>测算年化收益率</p>
+              </li>
+              <li>
+                <span class="t_blue">169<i>天</i></span>
+                <p>借款期限</p>
+              </li>
+            </ul>
+            <ul class="bottom hidden-xs">
+              <li>
+                <span>筹集金额（元）</span>
+                <p>0.05<i>万</i></p>
+              </li>
+              <li>
+                <span>产品星级</span>
+                <p>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star f-color"></i>
+                </p>
+              </li>
+              <li>
+                <span>投资进度0%</span>
+                <p class="progress_bar_null"></p>
+              </li>
+            </ul>
+          </a>
+          <a class="card_inner col-md-4 col-sm-6 col-xs-12" href="javascript:;">
+            <div class="seal">还款中</div>
+            <h4>易投保L-62期-3<span>月</span><span>机</span><span>转</span></h4>
+            <ul class="center clearfix">
+              <li>
+                <span><b class="t_red">43.95</b><i class="t_red">%</i><del>&nbsp;原:12%</del></span>
+                <p>测算年化收益率</p>
+              </li>
+              <li>
+                <span class="t_blue">157<i>天</i></span>
+                <p>借款期限</p>
+              </li>
+            </ul>
+            <ul class="bottom hidden-xs">
+              <li>
+                <span>筹集金额（元）</span>
+                <p>1.02<i>万</i></p>
+              </li>
+              <li>
+                <span>产品星级</span>
+                <p>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star f-color"></i>
+                </p>
+              </li>
+              <li>
+                <span>投资进度0%</span>
+                <p class="progress_bar_null"></p>
+              </li>
+            </ul>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 新闻 -->
+    <div class="new container">
+      <div class="media col-lg-7 col-md-12">
+        <div class="media_bg hidden-md hidden-sm hidden-xs"></div>
+        <div class="bar">
+          媒体报道
+          <a class="f_right" href="javascript:;">更多</a>
+        </div>
+        <ul class="content">
+          <li>
+            <img class="lazyload" data-original="../images/15312901538774545.jpg" alt="">
+            <a class="whiteSpace" href="javascript:;">【腾讯网】获香港主板上市公司战略投资 微金所成风投热点平台</a>
+            <span class="f_right hidden-xs">2018-07-16</span>
+            <p class="whiteSpace_three">
+              随着2018年7月的到来，互联网金融领域再次曝出重磅资本动态。近日，媒体在分析港股市场走势时，特别关注了香港主板上市公司鹰力投资股份有限公司（股票代码00901）的相关动态。</p>
+          </li>
+          <li>
+            <img class="lazyload" data-original="../images/15312897362356887.jpg" alt="">
+            <a class="whiteSpace" href="javascript:;">【凤凰网】微金所：在FinTech持续投入，坚定打造金融核心竞争力</a>
+            <span class="f_right hidden-xs">2018-07-16</span>
+            <p class="whiteSpace_three">
+              关于金融科技的未来规划，微金所CTO刘恒阳表示，技术是个双刃剑，它没有对错，运用它的企业必须有其价值底线。运用各种先进的技术做好风控、服务好客户不仅仅是对投资人的一份坚实的承诺，也是对金融市场稳定长远发展的一份贡献</p>
+          </li>
+        </ul>
+      </div>
+      <div class="hd_new col-lg-5 col-md-12">
+        <div class="bar">
+          微金所头条
+          <a class="f_right" href="javascript:;">更多</a>
+        </div>
+        <ul>
+          <li>
+            <a class="whiteSpace" href="javascript:;"><span>【微公告】</span>微金所平台中秋节&十一放假通知</a>
+            <a class="whiteSpace" href="javascript:;"><span>【微公告】</span>微金所客服时间调整通知</a>
+            <a class="whiteSpace" href="javascript:;"><span>【微公告】</span>微金所连连支付充值通道暂停通知</a>
+            <a class="whiteSpace" href="javascript:;"><span>【微公告】</span>2018年7月9日-2018年7月15日还款通知</a>
+            <a class="whiteSpace" href="javascript:;"><span>【微公告】</span>微金所债券转让规则调整公告</a>
+            <a class="whiteSpace" href="javascript:;"><span>【微公告】</span>2018年7月11日微金所平台系统升级维护公告</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- 底部通栏 -->
+  <div class="footer">
+    <div class="container inner">
+      <!-- 合作伙伴 -->
+      <div class="parent row">
+        <ul class="col-md-3 hidden-sm hidden-xs">
+          <li><img src="../images/logo2.png" alt=""></li>
+          <li class="phoneNum">
+            <p>4006-89-4006</p>
+            <p>010-57648460</p>
+          </li>
+          <li>服务热线(服务时间:9:00---21:00)</li>
+          <li>
+            <span><a href="javascript:;"><i class="iconfont">&#xe77d;</i>在线客服</a>
+              <p class="
+                        attention">关注我们：<i class="fa fa-weixin"></i><a class="f_right" href="javascript:;"><i
+                    class="fa fa-weibo"></i></a></p>
+            </span>
+            <span><a href="javascropt:;"><img data-original="../images/gongshangju.png" alt=""></a></span>
+          </li>
+        </ul>
+        <div class="footerBar col-md-5 col-sm-12 col-xs-12">
+          <div class="row">
+            <dl class="col-md-4 col-sm-4 col-xs-4">
+              <dt><a href="javascript:;">信息披露</a></dt>
+              <dd><a href="javascript:;">公司简介</a></dd>
+              <dd><a href="javascript:;">管理团队</a></dd>
+              <dd><a href="javascript:;">友情链接</a></dd>
+              <dd><a href="javascript:;">联系我们</a></dd>
+            </dl>
+            <dl class="col-md-4 col-sm-4 col-xs-4">
+              <dt><a href="javascript:;">最新动态</a></dt>
+              <dd><a href="javascript:;">媒体报道</a></dd>
+              <dd><a href="javascript:;">公司动态</a></dd>
+              <dd><a href="javascript:;">利率报告</a></dd>
+              <dd><a href="javascript:;">更新历史</a></dd>
+            </dl>
+            <dl class="col-md-4 col-sm-4 col-xs-4">
+              <dt><a href="javascript:;">帮助中心</a></dt>
+              <dd><a href="javascript:;">新手指引</a></dd>
+              <dd><a href="javascript:;">安全保障</a></dd>
+              <dd><a href="javascript:;">操作指南</a></dd>
+              <dd><a href="javascript:;">VIP投资人</a></dd>
+            </dl>
+          </div>
+        </div>
+        <table class="col-md-4 hidden-sm hidden-xs">
+          <th>合作伙伴</th>
+          <tr>
+            <td><a class="iconfont iconSize" href="javascript:;">&#xe60b;</a></td>
+            <td><a class="iconfont" href="javascript:;">&#xe831;</a></td>
+            <td><a class="iconfont" href="javascript:;">&#xe973;</a></td>
+            <td><a class="iconfont" href="javascript:;">&#xe60d;</a></td>
+          </tr>
+          <tr>
+            <td><a class="iconfont" href="javascript:;">&#xe8bb;</a></td>
+            <td><a class="iconfont" href="javascript:;">&#xe62f;</a></td>
+            <td><a class="iconfont iconSize" href="javascript:;">&#xe67c;</a></td>
+            <td><a class="iconfont" href="javascript:;">&#xe620;</a></td>
+          </tr>
+        </table>
+      </div>
+      <!-- 版权 -->
+      <div class="bottomBar">
+        <ul class="bar hidden-md hidden-sm hidden-xs">
+          <li>我要投资</li>
+          <li>我要借款</li>
+          <li>忘记密码</li>
+          <li>如何提现</li>
+          <li><a href="javascript:;">登录</a>|<a href="javascript:;">注册</a></li>
+        </ul>
+        <p class="copyRight">&copy;版权所有&copy;深圳微金所金融信息服务有限公司 粤ICP备 16000732号-1
+          <a href="javascript:;"><img src="../images/police.png" alt="">京公网安备案&nbsp;12345678912345号</a>
+        </p>
+        <ul class="safetyCertificate hidden-md hidden-sm hidden-xs">
+          <li><a class="iconfont" href="javascript:;">&#xe695;</a></li>
+          <li><a class="iconfont" href="javascript:;">&#xe609;</a></li>
+          <li><a class="iconfont" href="javascript:;">&#xe7c0;</a></li>
+          <li><a class="iconfont" href="javascript:;">&#xe6c6;</a></li>
+          <li><a class="iconfont" href="javascript:;">&#xe603;</a></li>
+          <li><a class="iconfont" href="javascript:;">&#xe643;</a></li>
+          <li><a class="iconfont" href="javascript:;">&#xed2f;</a></li>
+          <li><a class="iconfont" href="javascript:;">&#xe602;</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="../lib/jquery/jquery-1.12.4.min.js"></script>
+  <script src="../lib/bootstrap-3.3.7/js/bootstrap.js"></script>
+  <script src="../lib/jquery/jquery.lazyload.min.js"></script>
+  <script src="../js/index.js"></script>
+</body>
+
+</html>

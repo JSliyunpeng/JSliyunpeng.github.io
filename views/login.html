@@ -1,0 +1,99 @@
+{{ extend './layout.html' }}
+{{ block 'content' }}
+<div class="nav">
+  <div class="inner container">
+    <h1 class="logo"><a href="/"><img src="../images/logo.png" alt="">微金所logo</a></h1>
+    <ul>
+      <li><a class="bm" href="/register" id="register">注册</a></li>
+      <li><a class="loginbm" href="/login" id="login">登录</a></li>
+      <li><a href="/" class="btn btn-default hidden-xs">返回首页</a></li>
+    </ul>
+  </div>
+</div>
+<div class="login container">
+  <div class="row">
+    <a class="img col-md-7 pull-left  hidden-sm hidden-xs" href="javascript:;">
+      <img class="" src="../images/register_img.jpg" alt="">
+    </a>
+    <form class="col-md-5 col-sm-12 col-xs-12" action="/login" method="POST">
+      <img src="../images/success.png" alt="">
+      <h3>登录微金所</h3>
+      <div class="form-group">
+        <i class="iconfont">&#xe647;</i>
+        <input type="text" class="form-control" id="phoneNum" name="phoneNum" placeholder="请输入您的手机号码">
+        <div class="warning phoneWarning">{{message}}</div>
+      </div>
+      <div class="form-group">
+        <i class="iconfont">&#xe783;</i>
+        <input type="password" class="form-control" id="password" name="password" placeholder="密码">
+        <div class="warning apsswordWarning">密码</div>
+      </div>
+      <div class="form-group clearfix">
+        <div>
+          <span class=""><b class="iconfont"><input class="checkbox pull-left" type="checkbox">记住密码</span>
+          <span class=" pull-right"><a class="" href="javascript:;">忘记密码</a></span>
+        </div>
+        <div class="warning agreementWarning"></div>
+      </div>
+      <button type="submit" class="submit btn btn-danger">登陆</button>
+      <div class="form-group">
+        <p class="">还没有账号？<a class="t_FE9305" href="/register">立即注册</a></p>
+      </div>
+    </form>
+
+
+  </div>
+</div>
+<div class="loginCopy">
+  <p class="center-block text-center registerCopy">&copy;版权所有&copy;深圳微金所金融信息服务有限公司 粤ICP备 16000732号-1</p>
+</div>
+{{ /block }}
+{{ block 'scriptAjax' }}
+<script>
+  $(function () {
+
+    // 手机号处理
+    var warning = $('.warning')
+    $('#phoneNum').focus(function () {
+      $('.phoneWarning').empty()
+    })
+
+    // 密码框处理
+    $('#password').focus(function () {
+      $('.apsswordWarning').empty()
+    })
+
+    $('.submit').on('click', function () {
+      warning.map(function () {
+        warning.empty()
+      })
+    })
+    $('form').on('submit', function (e) {
+      e.preventDefault()
+      var formData = $(this).serialize()
+      $.ajax({
+        url: '/login',
+        type: 'post',
+        data: formData,
+        success: function (data) {
+          var err_code = data.err_code
+          var message = data.message
+          if (err_code === 0) { //注册成功
+            window.alert(message)
+            window.location.href = '/'
+          } else if (err_code === 1) {
+            warning[0].append(message)
+          } else if (err_code === 2) {
+            warning[0].append(message)
+          } else if (err_code === 3) {
+            warning[1].append(message)
+          } else if (err_code === 500) {
+            window.alert(message)
+          }
+        }
+      })
+    })
+  })
+
+</script>
+{{ /block }}

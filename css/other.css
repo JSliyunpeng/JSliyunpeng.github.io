@@ -1,0 +1,258 @@
+/*登录注册导航栏*/
+.navLayoutBg {
+    width: 100%;
+    height: 100%;
+    background-color: #EFFAFF;
+}
+
+.nav {
+    height: 75px;
+    width: 100%;
+    border-bottom: 1px solid #E3E3E3;
+    background-color: #fff;
+}
+
+.nav h1 {
+    font-size: 0;
+    float: left;
+}
+
+.nav ul {
+    float: right;
+    margin: 0;
+}
+
+.nav ul li {
+    float: right;
+    margin-left: 25px;
+    padding-top: 20px;
+}
+
+.nav ul li .btn {
+    height: 50px;
+    border: 1px solid #FE9305;
+    color: #FE9305;
+    font-weight: normal;
+    line-height: 36px;
+}
+
+.nav ul li .btn:visited {
+    color: #FE9305;
+}
+
+.nav ul li a {
+    height: 55px;
+    display: block;
+    font-size: 22px;
+    line-height: 55px;
+}
+
+.nav ul li a:hover {
+    /* color: #428bca; */
+}
+
+
+/*注册页面内容*/
+.registerbm {
+    color: #dd3137;
+    border-bottom: 3px solid #dd3137;
+}
+.content {
+    background-color: #EFFAFF;
+    padding: 30px 0 50px 0;
+}
+
+.content .img {
+    padding-top: 50px;
+}
+
+.register {
+    height: 100%;
+    padding: 30px 50px;
+    border: 1px solid #E3E3E3;
+    background-color: #fff;
+}
+
+.register h3 {
+    margin: 0 auto;
+    color: #666666;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.register form {
+    position: relative;
+    color: #ccc;
+}
+
+.register form i {
+    position: absolute;
+    padding: 3px 0px 0 10px;
+    font-size: 24px;
+}
+
+.register form input {
+    height: 40px;
+    border-radius: 0;
+    font-size: 12px;
+    padding: 0px 0 0 44px;
+}
+
+.register form .warning {
+    height: 20px;
+    width: 100%;
+    overflow: hidden;
+    color: red;
+}
+
+.register form .verifyImg {
+    position: absolute;
+    right: 0;
+    height: 40px;
+    display: block;
+    background-color: red;
+    width: 70px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 16px;
+    letter-spacing: 4px;
+}
+
+.register form .phoneVerify {
+    position: absolute;
+    height: 40px;
+    right: 0;
+    /* bottom: 0; */
+    display: block;
+    border-radius: 0;
+}
+
+.register form .inviteCode:visited {
+  color: #5EC1F1;
+}
+.register form .checkbox {
+    height: 14px;
+}
+
+.register form .submit {
+    width: 100%;
+}
+
+
+/*登录*/
+.login {
+    padding-top: 20px;
+    /* background-color: #fff; */
+}
+.loginbm {
+    color: #dd3137;
+    border-bottom: 3px solid #dd3137;
+}
+.login>.row>a {
+    display: block;
+    padding-top: 50px;
+}
+.login>.row>a>img {
+    width: 100%;
+}
+.login form {
+    padding: 49px 100px;
+    background-color: #fff;
+    color: #B8B8B8;
+    font-size: 16px;
+    font-weight: normal;
+}
+.login form img {
+    position: absolute;
+    right: 120px;
+    top: 95px;
+    z-index: 999;
+}
+.login form h3 {
+    font-size: 22px;
+    text-align: center;
+    padding: 20px 0 90px 0;
+}
+.login form .form-group {
+    position: relative;
+}
+.login form .form-group i {
+    position: absolute;
+    font-size: 22px;
+    left: 0;
+    top: 1px;
+}
+.login form .form-group input {
+    padding-left: 29px;
+}
+.login form .form-group a {
+    color: #B8B8B8;
+    font-weight: normal;
+}
+.login form .submit {
+    width: 100%;
+    margin-bottom: 10px;
+}
+.loginCopy {
+    height: 100px;
+    width: 100%;
+    background: #F3F3F3;color: #B8B8B8;
+    font-style: normal;
+    position: fixed;
+    bottom: 0;
+    margin-top:20px;
+}
+.loginCopy p {
+    line-height: 100px;
+
+}
+
+@media screen and (max-width: 768px) {
+    .nav {
+        height: 50px;
+    }
+    .nav h1 {
+        margin: 0;
+    }
+    .nav .inner ul li {
+        margin-left: 10px;
+        padding: 0;
+    }
+    .nav .inner ul li .bm {
+        font-size: 16px;
+        margin-left: 10px;
+    }
+    .register {
+        padding: 10px 30px;
+    }
+    .register form .form-group {
+        margin: 0px;
+    }
+    .register form .agree {
+        float: left !important;
+    }
+    .register form .login_p {
+        margin: 5px 0 0 0;
+    }
+    .register form .phoneVerify {
+        /* bottom: 139px; */
+        right: 0px;
+    }
+    .content {
+        padding: 10px 0;
+    }
+
+
+
+
+    .login form {
+        padding: 0px 27px;
+    }
+    .login form img {
+        position: absolute;
+        right: 46px;
+        top: 48px;
+        z-index: 999;
+    }
+
+}
