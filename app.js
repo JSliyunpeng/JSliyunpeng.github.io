@@ -44,7 +44,7 @@ app.use(session({
 
 app.use(router)
 
-app.listen(80, function () {
+app.listen(3000, function () {
   console.log('running...')
 })
 module.exports = app

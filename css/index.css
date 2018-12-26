@@ -1057,12 +1057,12 @@
     }
 
     .footer {
-        height: 267px;
+        height: 300px;
         padding-top: 0px;
     }
 
     .footer .inner .parent {
-        height: 173px;
+        height: 160px;
         /* background: pink; */
     }
 
@@ -1081,6 +1081,12 @@
 }
 
 @media screen and (max-width: 970px) {
+    .footer .footerBar dd a{
+        font-size: 14px;
+    }
+    .footer .footerBar dt a {
+        font-size: 18px;
+    }
     .footer .bottomBar .copyRight {
         width: 100%;
         text-align: center;
@@ -1124,5 +1130,10 @@
 @media screen and (min-width: 768px) and (max-width: 1200px) {
     .centerbg {
         height: 2070px;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .navBox .navBox_inner .navbar .nav > li > a{
+        font-size: 22px;
     }
 }
